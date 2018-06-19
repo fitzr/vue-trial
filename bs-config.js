@@ -16,7 +16,7 @@ module.exports = {
     "ui": {
         "port": 3001
     },
-    "files": "./src/*",
+    "files": "./src/**/*",
     "watchEvents": [
         "change"
     ],
@@ -104,7 +104,8 @@ module.exports = {
         "png": "img",
         "svg": "img",
         "gif": "img",
-        "js": "script"
+        "js": "script",
+        "ts": "script"
     },
     "injectNotification": false
 };
