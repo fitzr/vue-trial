@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js App</title>
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <button v-on:click="show=!show">切り替え</button>
+  <transition>
+    <p v-if="show">{{ message }}</p>
+  </transition>
+</div>
+<script src="dist/bundle.js"></script>
+</body>
+</html>
