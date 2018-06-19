@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "serve": "webpack --watch -d & browser-sync start --config bs-config.js"
   },
   "dependencies": {
     "vue": "^2.5.16",
@@ -13,6 +14,7 @@
   },
   "devDependencies": {
     "@types/node": "^10.3.4",
+    "browser-sync": "^2.24.4",
     "html-loader": "^0.5.5",
     "ts-loader": "^4.4.1",
     "typescript": "^2.9.2",

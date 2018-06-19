@@ -1,5 +1,4 @@
 module.exports = {
-  mode: 'development',
   entry: __dirname + '/main.ts',
   output: {
     path: __dirname + '/dist',
