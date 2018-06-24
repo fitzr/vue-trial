@@ -7,7 +7,7 @@ let bus = new Vue({
 })
 
 @Component
-export default class App extends Vue {
+export default class MyComponent extends Vue {
 
     created() {
         bus.$on('bus-event', () => {

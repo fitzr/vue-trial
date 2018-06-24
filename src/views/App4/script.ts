@@ -2,8 +2,6 @@ import { Component, Vue } from 'vue-property-decorator'
 import MyComponent from './MyComponent/index.vue'
 
 
-let vue = new Vue()
-
 @Component({
     components: { MyComponent }
 })

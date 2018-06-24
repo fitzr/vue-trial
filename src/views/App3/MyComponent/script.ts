@@ -2,7 +2,7 @@ import { Component, Vue, Prop, Emit } from 'vue-property-decorator'
 import 'reflect-metadata'
 
 @Component
-export default class App extends Vue {
+export default class MyComponent extends Vue {
 
     @Prop({
         type: Number,
