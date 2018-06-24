@@ -1,7 +1,7 @@
 <template>
   <div>
-    <my-component val='first child'></my-component>
-    <my-component val='second child'></my-component>
+    <my-component :val='12' @click.native="parentsMethod('BAR')"></my-component>
+    <my-component id="hoge" :val='msg' @handle-event="parentsMethod"></my-component>
   </div>
 </template>
 

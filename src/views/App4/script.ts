@@ -1,13 +1,16 @@
 import { Component, Vue } from 'vue-property-decorator'
 import MyComponent from './MyComponent/index.vue'
 
+
+let vue = new Vue()
+
 @Component({
     components: { MyComponent }
 })
 export default class App extends Vue {
-    msg = 999
+    msg: string = 'init'
 
-    parentsMethod(msg: string) {
-        alert('catch event !!' + msg)
+    handleChild(val: string) {
+        this.msg = val
     }
 }
