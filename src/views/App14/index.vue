@@ -9,21 +9,27 @@
   </div>
 </template>
 
-<script src="./script.ts" lang="ts"></script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 
-<style>
-  .v-enter-active, .v-leave-active {
-    transition: all 1s;
-  }
-  .v-leave-active {
-    position: absolute;
-  }
-  .v-enter {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  .v-leave-to {
-    opacity: 0;
-    transform: translateX(20px);
-  }
+@Component
+export default class App extends Vue {
+    toggle = false
+    get fill(): string {
+        return this.toggle ? 'lightpink' : 'skyblue'
+    }
+}
+</script>
+
+<style lang="sass">
+.v-enter-active, .v-leave-active
+  transition: all 1s
+.v-leave-active
+  position: absolute
+.v-enter
+  opacity: 0
+  transform: translateX(-20px)
+.v-leave-to
+  opacity: 0
+  transform: translateX(20px)
 </style>

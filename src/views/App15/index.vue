@@ -6,15 +6,15 @@
   </div>
 </template>
 
-<script type="ts" lang="ts">
-import { Component, Prop, Model, Vue, Watch } from 'vue-property-decorator'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 import CustomInput from './custom-input.vue'
 
 @Component({
 components: { CustomInput }
 })
 export default class App extends Vue {
-text = 'init'
+    text = 'init'
 }
 </script>
 <style>

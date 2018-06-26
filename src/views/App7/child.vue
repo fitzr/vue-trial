@@ -1,5 +1,13 @@
-import {Component, Vue, Model, Emit, Prop} from 'vue-property-decorator'
-import {PropsDefinition} from "vue/types/options";
+<template>
+  <div>
+    <p>name.{{ name }} HP.{{ hp }}</p>
+    <p>name <input v-model='localName'></p>
+    <p>HP <input v-model.number='localHp'></p>
+  </div>
+</template>
+
+<script lang="ts">
+import {Component, Vue, Emit, Prop} from 'vue-property-decorator'
 
 @Component
 export default class ChildComponent extends Vue {
@@ -33,3 +41,4 @@ export default class ChildComponent extends Vue {
     updateHp(val: number) {}
 
 }
+</script>
