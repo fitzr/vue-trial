@@ -1,3 +1,12 @@
+<template>
+  <div>
+    <p>{{ message }}</p>
+    <p>{{ answer }}</p>
+    <button @click='mod'>mod</button>
+  </div>
+</template>
+
+<script lang="ts">
 import { Component, Vue, Prop, Emit } from 'vue-property-decorator'
 
 let bus = new Vue({
@@ -32,3 +41,4 @@ export default class MyComponent extends Vue {
         this.$emit('child-event', 'CHILD')
     }
 }
+</script>

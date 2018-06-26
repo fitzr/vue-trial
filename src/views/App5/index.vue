@@ -11,4 +11,13 @@
   </div>
 </template>
 
-<script src="./script.ts" lang="ts"></script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import ChildComponent from './child.vue'
+
+@Component({
+    components: { ChildComponent }
+})
+export default class App extends Vue {
+}
+</script>

@@ -6,4 +6,10 @@
   </div>
 </template>
 
-<script src="./script.ts" lang="ts"></script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component
+export default class ChildComponent extends Vue {
+}
+</script>

@@ -5,19 +5,21 @@
   </div>
 </template>
 
-<script src="./script.ts" lang="ts"></script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import MyComponent from './child.vue'
+
+@Component({
+    components: { MyComponent }
+})
+export default class App extends Vue {
+    msg = 999
+
+    parentsMethod(msg: string) {
+        alert('catch event !!' + msg)
+    }
+}
+</script>
 
 <style>
-  .red {
-    color: #f00;
-  }
-  @keyframes cloak-in {
-    0% { opacity: 0; }
-  }
-  #msg {
-    animation: cloak-in 1s;
-  }
-  #msg[v-cloak] {
-    opacity: 0;
-  }
 </style>

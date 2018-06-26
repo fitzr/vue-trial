@@ -1,3 +1,11 @@
+<template>
+  <div>
+    <p>{{ val }}</p>
+    <button @click="handleEvent('HOGE')">fire event</button>
+  </div>
+</template>
+
+<script lang="ts">
 import { Component, Vue, Prop, Emit } from 'vue-property-decorator'
 import 'reflect-metadata'
 
@@ -15,3 +23,4 @@ export default class MyComponent extends Vue {
     handleEvent(msg: string) {
     }
 }
+</script>

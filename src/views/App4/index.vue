@@ -6,4 +6,19 @@
   </div>
 </template>
 
-<script src="./script.ts" lang="ts"></script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import MyComponent from './child.vue'
+
+
+@Component({
+    components: { MyComponent }
+})
+export default class App extends Vue {
+    msg: string = 'init'
+
+    handleChild(val: string) {
+        this.msg = val
+    }
+}
+</script>
