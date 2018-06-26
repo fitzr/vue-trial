@@ -1,6 +1,7 @@
 <template>
   <div>
     <child-component v-model='date'></child-component>
+    <child-component v-model='date2'></child-component>
   </div>
 </template>
 

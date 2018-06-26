@@ -6,4 +6,5 @@ import ChildComponent from './child-component/index.vue'
 })
 export default class App extends Vue {
     date = '20160101'
+    date2 = '20160102'
 }
