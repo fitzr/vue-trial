@@ -20,6 +20,8 @@
     "browser-sync": "^2.24.4",
     "css-loader": "^0.28.11",
     "html-loader": "^0.5.5",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
     "ts-loader": "^4.4.1",
     "typescript": "^2.9.2",
     "vue-loader": "^14.2.2",

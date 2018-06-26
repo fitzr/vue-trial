@@ -2,7 +2,7 @@
   <div>
     <input v-model.number="budget"> 円以下に絞り込む
     <input v-model.number="limit"> 件表示
-    <p>{{ matched.length }} 件中 {{ limited.length }} 件表示 </p>
+    <p class='red'>{{ matched.length }} 件中 {{ limited.length }} 件表示 </p>
     <button @click="toggleOrder">切替</button>
     <ul>
       <li v-for="item in limited" :key="item.id">
@@ -73,17 +73,7 @@ export default class App extends Vue {
 }
 </script>
 
-<style>
-  .red {
-    color: #f00;
-  }
-  @keyframes cloak-in {
-    0% { opacity: 0; }
-  }
-  #msg {
-    animation: cloak-in 1s;
-  }
-  #msg[v-cloak] {
-    opacity: 0;
-  }
+<style lang="sass">
+.red
+  color: #f00
 </style>
