@@ -1,14 +1,14 @@
 <template>
   <div>
-    <component :is="'custom-input'" v-model="text"></component>
-    <custom-input v-model="text"></custom-input>
+    <component is="CustomInput" v-model="text"></component>
+    <CustomInput data-test="bazz" v-model="text"></CustomInput>
     <p>{{ text }}</p>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import CustomInput from './custom-input.vue'
+import CustomInput from './CustomInput.vue'
 
 @Component({
 components: { CustomInput }

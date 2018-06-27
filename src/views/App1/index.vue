@@ -73,7 +73,7 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .red
   color: #f00
 </style>

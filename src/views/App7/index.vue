@@ -9,6 +9,8 @@
 import { Component, Vue } from 'vue-property-decorator'
     import ChildComponent from './child.vue'
 
+// .sync can be used when we wanna add two or more v-model values.
+
 @Component({
     components: { ChildComponent }
 })

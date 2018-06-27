@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-test="bar">
     <input :value="value" @input="inputText">
     <!--<input v-model="value">-->
   </div>

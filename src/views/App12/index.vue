@@ -27,7 +27,7 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .v-enter-active, .v-leave-active
   transition: opacity 1s, transform 1s
 .v-enter

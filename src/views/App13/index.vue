@@ -35,7 +35,7 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .list-enter-active, .list-leave-active
   transition: opacity 1s, transform 1s
 .list-leave-active
