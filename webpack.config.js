@@ -1,11 +1,17 @@
+const path = require('path')
+
 module.exports = {
   entry: './src/main.ts',
   output: {
-    path: __dirname + '/dist',
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '@': path.join(__dirname, 'src')
+    }
+
   },
   module: {
     rules: [

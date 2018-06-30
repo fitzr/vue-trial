@@ -4,9 +4,9 @@
 
 <script lang="ts">
 import Component, { mixins } from 'vue-class-component'
-import HelloMix from './hello-mix'
+import HelloMix from './hello-mix.ts'
 
 @Component
-export default class ComponentA extends mixins(HelloMix) {
+export default class ComponentA extends mixins<HelloMix>(HelloMix) {
 }
 </script>
