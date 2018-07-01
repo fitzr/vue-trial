@@ -13,7 +13,7 @@ const moduleA = {
         message: 'initial message'
     },
     getters: {
-        message: (state: State, getters, rootState, rootGetters) => state.message
+        message: (state: State, getters: any, rootState: State, rootGetters:any) => state.message
     },
     mutations: {
         setMessage: (state: State, payload: { message: string }) => {

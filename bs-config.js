@@ -27,7 +27,9 @@ module.exports = {
         "ignoreInitial": true
     },
     "server": {
-      "baseDir": "."
+      "baseDir": ".",
+      "index": "index.html",
+      "middleware": [ require('connect-history-api-fallback')() ]
     },
     "proxy": false,
     "port": 3000,

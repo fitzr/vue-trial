@@ -1,7 +1,7 @@
-import { shallowMount} from "@vue/test-utils"
+import {shallowMount, ThisTypedShallowMountOptions} from "@vue/test-utils"
 import MyComponent from '@/components/MyComponent.vue'
 
-function createVM(option?) {
+function createVM(option?: ThisTypedShallowMountOptions<MyComponent>): any {
     return shallowMount(MyComponent, option).vm
 }
 
