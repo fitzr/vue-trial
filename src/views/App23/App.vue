@@ -3,7 +3,7 @@
     nav
       router-link(to="/" exact) Home
       | &nbsp;
-      router-link(to="/product" exact) Product
+      router-link(to="/product") Product
     router-view
 </template>
 

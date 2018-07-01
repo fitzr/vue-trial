@@ -1,7 +1,7 @@
 <template lang="pug">
   .home
     h1 Home
-    router-link(to='/products') products
+    router-link(to='/product') product list
     br
     br
     router-link(:to='`/product/${id}`' tag='button') product
