@@ -17,7 +17,7 @@
 
     @Component
     export default class Product extends Vue {
-        item: ProductType = null
+        item: ProductType | null = null
 
         @Prop()
         id: number
