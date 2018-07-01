@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './views/App23/App.vue'
-import store from './store'
+import store from './store/index'
 import router from './router'
 
 new Vue({

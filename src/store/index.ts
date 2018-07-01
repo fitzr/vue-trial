@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import product from './product'
 
 Vue.use(Vuex)
 
@@ -30,6 +31,7 @@ const moduleA = {
 export default new Vuex.Store({
     strict: process.env.NODE_ENV !== 'production',
     modules: {
-        moduleA
+        moduleA,
+        product,
     }
 })

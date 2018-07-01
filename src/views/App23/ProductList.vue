@@ -11,7 +11,7 @@
     import Database from '@/api/products'
 
     @Component
-    export default class Products extends Vue {
+    export default class ProductList extends Vue {
         get list() {
             return Database.fetch()
         }
