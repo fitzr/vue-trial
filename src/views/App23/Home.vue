@@ -4,13 +4,13 @@
     router-link(to='/product') product list
     br
     br
-    router-link(:to='`/product/${id}`' tag='button') product
+    router-link(to='/product/9' tag='button') product
     br
     br
     router-link(:to="{ path: '/product', query: { id: 10 } }") product10
     br
     br
-    router-link(:to="{ name: 'product', params: { id: 10 } }") product10
+    router-link(:to="{ name: 'product-home', params: { id: 11 } }") product10
     br
     br
     button(@click="onClick") products

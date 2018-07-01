@@ -21,9 +21,13 @@ export default {
         }
     },
     actions: {
-        async load({ commit }: any, id: number) {
-            commit('set', await Database.asyncFind(id))
+        load({ commit }: any, id: number) {
+
+            commit('set', { detail: Database.find(id) })
         },
+        // async load({ commit }: any, id: number) {
+        //     commit('set', await Database.asyncFind(id))
+        // },
         destroy({ commit }:any) {
             commit('clear')
         }

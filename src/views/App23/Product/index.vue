@@ -24,6 +24,14 @@
         @product.Getter
         detail: ProductType
 
+        @Watch('id', { immediate: true })
+        onIdChanged(newId: number) {
+            this.load(newId)
+        }
+
+        @product.Action
+        load: (id: number) => Promise<any>
+
         // item: ProductType | null = null
         // @Watch('id', { immediate: true })
         // async onIdChanged(newId: number) {

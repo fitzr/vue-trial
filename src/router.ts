@@ -10,7 +10,7 @@ import ProductReviewDetail from '@/views/App23/Product/ReviewDetail.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     routes: [
         {
@@ -21,11 +21,14 @@ export default new Router({
         {
             path: '/product',
             name: 'product-list',
-            component: ProductList
+            component: ProductList,
+            beforeEnter: (to, from, next) => {
+                console.log('route:beforeEnter')
+                next()
+            }
         },
         {
             path: '/product/:id',
-            name: 'product',
             component: Product,
             props: route => ({ id: Number(route.params.id) }),
             children: [
@@ -55,6 +58,16 @@ export default new Router({
     ]
 })
 
+router.beforeEach((to, from, next) => {
+    console.log('global:beforeEach')
+    next()
+})
+router.beforeResolve((to, from, next) => {
+    console.log('global:beforeResolve')
+    next()
+})
+router.afterEach((to, from) => {
+    console.log('global:afterEach')
+})
 
-
-
+export default router
