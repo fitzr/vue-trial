@@ -1,33 +1,30 @@
 <template lang="pug">
   div
-    single-date-picker(v-model="selectedSingleDate")
+    date-picker(v-model="selectedDate")
     br
-    range-date-picker(v-model="selectedRangeDate")
+    date-range-picker(v-model="selectedDateRange")
     br
-    custom-range-date-picker(v-model="customRangeDate")
+    custom-date-range-picker(v-model="customDateRange")
 
 </template>
 
 <script lang="ts">
 import {Component, Vue} from 'vue-property-decorator'
-import SingleDatePicker from './SingleDatePicker.vue'
-import RangeDatePicker from './RangeDatePicker.vue'
-import CustomRangeDatePicker from './ComplexRangeDatePicker.vue'
+import DatePicker from './DatePicker.vue'
+import DateRangePicker from './DateRangePicker.vue'
+import CustomDateRangePicker from './CustomDateRangePicker.vue'
+import DateRange from './DateRange'
 
 @Component({
     components: {
-        SingleDatePicker,
-        RangeDatePicker,
-        CustomRangeDatePicker
+        DatePicker,
+        DateRangePicker,
+        CustomDateRangePicker
     }
 })
 export default class App extends Vue {
-    selectedSingleDate: Date | null  = null
-    selectedRangeDate: { start: Date, end: Date } | null = null
-    customRangeDate: { start: Date, end: Date } | null = null
+    selectedDate: Date | null  = null
+    selectedDateRange: DateRange | null = null
+    customDateRange: DateRange | null = null
 }
 </script>
-
-<style lang="sass" scoped>
-
-</style>

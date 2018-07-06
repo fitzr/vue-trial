@@ -1,4 +1,6 @@
 <template lang="pug">
+  //- props は以下参照
+  //- https://docs.vcalendar.io/api.html#date-picker-props
   v-date-picker(
     mode="range",
     v-model="value"
@@ -7,7 +9,7 @@
     :formats="{title:'YYYY MMM'}"
     is-double-paned
   )
-    //- インプット要素を独自に定義する場合は以下のようにする
+    //- インプット要素を独自に定義する場合の例
     template(slot-scope="props")
       input(
         :value="props.inputValue"
@@ -15,18 +17,22 @@
         size="30"
         readonly
       )
+
+  //- カレンダーのスタイル変更は以下参照
+  //- https://docs.vcalendar.io/layout.html#default
 </template>
 
 <script lang="ts">
 import {Component, Vue, Prop, Emit} from 'vue-property-decorator'
+import DateRange from './DateRange'
 
 @Component
-export default class SingleDatePicker extends Vue {
+export default class DateRangePicker extends Vue {
     @Prop()
-    value: { start: Date, end: Date } | null
+    value: DateRange | null
 
     @Emit()
-    input(value: string) {
+    input(value: DateRange) {
     }
 }
 </script>

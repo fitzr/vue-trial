@@ -3,7 +3,6 @@
     input(
       type="text"
       placeholder="input here..."
-      :value="customRangeDateString"
       @click="onClick"
       size="30"
       readonly
@@ -11,11 +10,16 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'vue-property-decorator'
+import {Component, Vue, Prop} from 'vue-property-decorator'
 
 @Component
-export default class CustomRangeDatePicker extends Vue {
+export default class CustomDateRangePicker extends Vue {
+    @Prop()
+    value: Date | null
 
+    onClick() {
+
+    }
 }
 </script>
 
