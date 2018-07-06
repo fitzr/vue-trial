@@ -3,7 +3,7 @@
   //- https://docs.vcalendar.io/api.html#date-picker-props
   v-date-picker(
     mode="range",
-    v-model="value"
+    :value="value"
     @input="input"
     :show-day-popover="false"
     :formats="{title:'YYYY MMM'}"
@@ -29,7 +29,7 @@ import DateRange from './DateRange'
 @Component
 export default class DateRangePicker extends Vue {
     @Prop()
-    value: DateRange | null
+    value: DateRange
 
     @Emit()
     input(value: DateRange) {
