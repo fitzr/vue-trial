@@ -13,7 +13,6 @@
     import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
     import { namespace } from 'vuex-class'
     import { Product as ProductType } from '@/api/products'
-    import {Route} from "vue-router";
 
     const product = namespace('product')
 

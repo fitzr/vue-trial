@@ -1,11 +1,12 @@
 import Vue from 'vue'
-import App from './views/App23/App.vue'
-import store from './store/index'
-import router from './router'
+import App from './views/App24/App.vue'
+// import store from './store/index'
+// import router from './router'
+import './views/App24/v-calendar'
 
 new Vue({
-    store,
-    router,
+    // store,
+    // router,
     render: h => h(App)
 }).$mount('#app')
 
