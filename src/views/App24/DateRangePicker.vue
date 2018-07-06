@@ -1,5 +1,5 @@
 <template lang="pug">
-  //- props は以下参照
+  //- v-date-picker の props は以下参照
   //- https://docs.vcalendar.io/api.html#date-picker-props
   v-date-picker(
     mode="range",
