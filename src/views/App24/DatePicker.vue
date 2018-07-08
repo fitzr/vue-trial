@@ -3,7 +3,7 @@
   //- https://docs.vcalendar.io/api.html#date-picker-props
   v-date-picker(
     mode="single",
-    :value="value"
+    :value="date"
     @input="input"
     :show-day-popover="false"
     :formats="{title:'YYYY MMM'}"
@@ -22,15 +22,15 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue, Prop, Emit} from 'vue-property-decorator'
+import {Component, Vue, Model, Emit} from 'vue-property-decorator'
 
 @Component
 export default class DatePicker extends Vue {
-    @Prop()
-    value: Date
+    @Model('input')
+    date: Date
 
     @Emit()
-    input(value: Date) {
+    input(date: Date) {
     }
 }
 </script>

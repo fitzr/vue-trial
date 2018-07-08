@@ -34,20 +34,20 @@
 
 
 <script lang="ts">
-import {Component, Vue, Prop, Emit} from 'vue-property-decorator'
+import {Component, Vue, Model, Emit} from 'vue-property-decorator'
 
 @Component
 export default class CustomDateRangePicker extends Vue {
 
-    @Prop()
-    value: DateRange // 確定済の値
+    @Model('input')
+    dateRange: DateRange // 確定済の値
 
-    selectingDateRange = this.value // 選択中の値
+    selectingDateRange = this.dateRange // 選択中の値
 
     showPopover = false
 
     @Emit()
-    input(value: DateRange) {
+    input(dateRange: DateRange) {
     }
 
     onSubmit() {
@@ -56,8 +56,8 @@ export default class CustomDateRangePicker extends Vue {
     }
 
     get defaultDateRangeText() {
-        return this.value
-            ? this.value.start.toLocaleDateString()
+        return this.dateRange
+            ? this.dateRange.start.toLocaleDateString()
             : null
     }
 }
