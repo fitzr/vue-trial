@@ -24,6 +24,10 @@ module.exports = {
         use: [ 'style-loader', 'css-loader' ]
       },
       {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        loader: 'file-loader?name=../font/[name].[ext]'
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {

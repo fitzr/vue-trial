@@ -1,14 +1,9 @@
 <template lang="pug">
-  div
-    input(
-      type="text"
-      placeholder="input here..."
-      @focus="showDateRangePicker = true"
-      @blur="showDateRangePicker = false"
-      size="30"
-      readonly
-    )
-    .pickerContainer(v-if="showDateRangePicker")
+  el-popover(
+    placement="bottom"
+    trigger="click"
+  )
+    .picker-container
       .calendar
         v-date-picker(
           mode="range"
@@ -26,32 +21,38 @@
       button.button hoge
       button.button hoge
       button.button hoge
+    input(
+      slot="reference"
+      type="text"
+      placeholder="input here..."
+      size="30"
+      readonly
+    )
 </template>
+
 
 <script lang="ts">
 import {Component, Vue, Prop} from 'vue-property-decorator'
 
 @Component
 export default class CustomDateRangePicker extends Vue {
-    showDateRangePicker = false
-
     @Prop()
     value: DateRange
 }
 </script>
 
 <style lang="sass" scoped>
-.pickerContainer
+.picker-container
   display: grid
-  border: solid 1px darkgray
-  grid-template: repeat(9, 35px) / 550px 150px
-  width: 700px
-  height: 315px
-  align-content: stretch
-  justify-content: stretch
+  grid-template: repeat(9, 30px) / 550px 200px
+  align-items: center
+  justify-items: center
+
 .calendar
-  grid-row: 1 / -1
   grid-column: 1 / 2
-  align-self: center
-  justify-self: center
+  grid-row: 1 / -1
+
+.button
+  align-self: stretch
+  justify-self: stretch
 </style>
