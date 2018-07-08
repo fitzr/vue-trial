@@ -13,7 +13,6 @@ import {Component, Vue} from 'vue-property-decorator'
 import DatePicker from './DatePicker.vue'
 import DateRangePicker from './DateRangePicker.vue'
 import CustomDateRangePicker from './CustomDateRangePicker.vue'
-import DateRange from './DateRange'
 
 @Component({
     components: {

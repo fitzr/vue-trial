@@ -24,7 +24,6 @@
 
 <script lang="ts">
 import {Component, Vue, Prop, Emit} from 'vue-property-decorator'
-import DateRange from './DateRange'
 
 @Component
 export default class DateRangePicker extends Vue {
