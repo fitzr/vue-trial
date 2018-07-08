@@ -7,6 +7,7 @@
     @input="input"
     :show-day-popover="false"
     :formats="{title:'YYYY MMM'}"
+    popover-visibility="focus"
     is-double-paned
   )
     //- インプット要素を独自に定義する場合の例
