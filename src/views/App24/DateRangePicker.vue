@@ -12,10 +12,9 @@
   )
     //- インプット要素を独自に定義する場合の例
     template(slot-scope="props")
-      input(
+      input.input(
         :value="props.inputValue"
         placeholder="input here..."
-        size="30"
         readonly
       )
 
@@ -36,3 +35,10 @@ export default class DateRangePicker extends Vue {
     }
 }
 </script>
+
+<style lang="sass" scoped>
+.popover-container
+  width: 200px
+.input
+  width: 200px
+</style>

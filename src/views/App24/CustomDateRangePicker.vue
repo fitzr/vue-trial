@@ -2,11 +2,13 @@
   el-popover(
     placement="bottom"
     trigger="click"
+    v-model="showPopover"
   )
     .picker-container
       .calendar
         v-date-picker(
           mode="range"
+          v-model="selectingDateRange"
           :show-day-popover="false"
           :formats="{title:'YYYY MMM'}"
           is-inline
@@ -20,24 +22,44 @@
       button.button hoge
       button.button hoge
       button.button hoge
-      button.button hoge
-    input(
+      button.button(@click="onSubmit") 決定
+    input.input(
       slot="reference"
       type="text"
+      :value="defaultDateRangeText"
       placeholder="input here..."
-      size="30"
       readonly
     )
 </template>
 
 
 <script lang="ts">
-import {Component, Vue, Prop} from 'vue-property-decorator'
+import {Component, Vue, Prop, Emit} from 'vue-property-decorator'
 
 @Component
 export default class CustomDateRangePicker extends Vue {
+
     @Prop()
-    value: DateRange
+    value: DateRange // 確定済の値
+
+    selectingDateRange = this.value // 選択中の値
+
+    showPopover = false
+
+    @Emit()
+    input(value: DateRange) {
+    }
+
+    onSubmit() {
+        this.input(this.selectingDateRange)
+        this.showPopover = false
+    }
+
+    get defaultDateRangeText() {
+        return this.value
+            ? this.value.start.toLocaleDateString()
+            : null
+    }
 }
 </script>
 
@@ -55,4 +77,7 @@ export default class CustomDateRangePicker extends Vue {
 .button
   align-self: stretch
   justify-self: stretch
+
+.input
+  width: 200px
 </style>
