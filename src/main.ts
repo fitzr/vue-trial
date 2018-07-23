@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './views/App24/App.vue'
+import App from './views/App25/index.vue'
 // import store from './store/index'
 // import router from './router'
 import './views/App24/v-calendar'
