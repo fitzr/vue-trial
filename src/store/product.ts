@@ -22,7 +22,6 @@ export default {
     },
     actions: {
         load({ commit }: any, id: number) {
-
             commit('set', { detail: Database.find(id) })
         },
         // async load({ commit }: any, id: number) {
